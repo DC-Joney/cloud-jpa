@@ -1,0 +1,29 @@
+server:
+  port: 8082
+  error:
+    include-exception: true
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://123.56.16.249:3306/rong_demo?charset=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: ${mysql_pass}
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+    hibernate:
+      ddl-auto: update
+
+# /actuator 监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
