@@ -43,7 +43,7 @@ public class MysqlPassRunListener implements SpringApplicationRunListener, Envir
 
     private static class MysqlPassPropertySource extends PropertySource<ConnectionPass>{
         private static final String MYSQL_PASS_PROPERTY_NAME = "mysql_pass";
-        private static ConnectionPass connectionPass = ConnectionPass.of("kanglu5211314");
+        private static ConnectionPass connectionPass = ConnectionPass.of("");
         private MysqlPassPropertySource() {
             super(MYSQL_PASS_PROPERTY_NAME, connectionPass);
         }
