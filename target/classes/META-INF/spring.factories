@@ -1,0 +1,2 @@
+org.springframework.boot.SpringApplicationRunListener=com.dc.rong.config.MysqlPassRunListener
+org.springframework.boot.env.EnvironmentPostProcessor=com.dc.rong.config.MysqlPassRunListener
